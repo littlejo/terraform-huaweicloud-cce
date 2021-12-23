@@ -19,7 +19,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [huaweicloud_cce_addon.ingress](https://registry.terraform.io/providers/huaweicloud/huaweicloud/1.31.0/docs/resources/cce_addon) | resource |
-| [huaweicloud_cce_addon.this](https://registry.terraform.io/providers/huaweicloud/huaweicloud/1.31.0/docs/resources/cce_addon) | resource |
+| [huaweicloud_cce_addon.metrics](https://registry.terraform.io/providers/huaweicloud/huaweicloud/1.31.0/docs/resources/cce_addon) | resource |
 | [huaweicloud_cce_cluster.this](https://registry.terraform.io/providers/huaweicloud/huaweicloud/1.31.0/docs/resources/cce_cluster) | resource |
 | [huaweicloud_cce_node_pool.this](https://registry.terraform.io/providers/huaweicloud/huaweicloud/1.31.0/docs/resources/cce_node_pool) | resource |
 | [huaweicloud_cce_addon_template.ingress](https://registry.terraform.io/providers/huaweicloud/huaweicloud/1.31.0/docs/data-sources/cce_addon_template) | data source |
@@ -29,6 +29,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_addon_ingress_config"></a> [addon\_ingress\_config](#input\_addon\_ingress\_config) | nginx config for nginx-ingress addon | `map(any)` | `{}` | no |
+| <a name="input_addon_ingress_enable"></a> [addon\_ingress\_enable](#input\_addon\_ingress\_enable) | If you need nginx-ingress addon | `bool` | `false` | no |
 | <a name="input_addon_ingress_loadbalancer_ip"></a> [addon\_ingress\_loadbalancer\_ip](#input\_addon\_ingress\_loadbalancer\_ip) | Load balancer ip for nginx-ingress addon | `string` | `""` | no |
 | <a name="input_addon_ingress_resource"></a> [addon\_ingress\_resource](#input\_addon\_ingress\_resource) | nginx resource for nginx-ingress addon | `map(any)` | <pre>{<br>  "limitsCpu": "1024m",<br>  "limitsMem": "1024Mi",<br>  "name": "nginx-ingress",<br>  "requestsCpu": "256m",<br>  "requestsMem": "256Mi"<br>}</pre> | no |
 | <a name="input_flavor_id"></a> [flavor\_id](#input\_flavor\_id) | Flavor of the cce cluster | `string` | `"cce.s2.small"` | no |
