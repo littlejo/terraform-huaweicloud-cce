@@ -43,6 +43,6 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_certificate_clusters"></a> [certificate\_clusters](#output\_certificate\_clusters) | n/a |
-| <a name="output_certificate_users"></a> [certificate\_users](#output\_certificate\_users) | n/a |
-| <a name="output_kubeconfig"></a> [kubeconfig](#output\_kubeconfig) | n/a |
+| <a name="output_certificate_clusters"></a> [certificate\_clusters](#output\_certificate\_clusters) | certificate of cce cluster |
+| <a name="output_certificate_users"></a> [certificate\_users](#output\_certificate\_users) | certificate users of cce cluster |
+| <a name="output_kubeconfig"></a> [kubeconfig](#output\_kubeconfig) | kubeconfig file of cce cluster |
