@@ -11,6 +11,7 @@ resource "huaweicloud_cce_addon" "this" {
 }
 
 resource "huaweicloud_cce_addon" "ingress" {
+  count         = var.addon_ingress_enable ? 1 : 0
   cluster_id    = huaweicloud_cce_cluster.this.id
   template_name = "nginx-ingress"
   version       = "1.2.6"

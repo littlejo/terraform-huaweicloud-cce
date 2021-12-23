@@ -30,11 +30,17 @@ variable "node_pool_key_pair" {
   description = "public ssh key of cce node pool"
 }
 
+variable "addon_ingress_enable" {
+  description = "If you need nginx-ingress addon"
+  default     = false
+}
+
 variable "addon_ingress_loadbalancer_ip" {
   description = "Load balancer ip for nginx-ingress addon"
   type        = string
   default     = ""
 }
+
 
 variable "addon_ingress_config" {
   description = "nginx config for nginx-ingress addon"
