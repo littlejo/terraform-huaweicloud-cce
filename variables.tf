@@ -32,7 +32,7 @@ variable "nginx_config" {
   default = {}
 }
 
-variable "nginx_resources" {
+variable "nginx_resource" {
   type    = map(any)
   default = {
               limitsCpu   = "1024m"
