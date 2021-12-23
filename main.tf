@@ -8,10 +8,11 @@ resource "huaweicloud_cce_cluster" "this" {
 }
 
 resource "huaweicloud_cce_node_pool" "this" {
-  for_each  = var.node_pool
-  name      = each.value.name
-  os        = each.value.os
-  flavor_id = each.value.flavor_id
+  for_each          = var.node_pool
+  name              = each.value.name
+  os                = each.value.os
+  flavor_id         = each.value.flavor_id
+  availability_zone = try(each.value.availability_zone, "random")
 
   scall_enable = false
   cluster_id   = huaweicloud_cce_cluster.this.id
