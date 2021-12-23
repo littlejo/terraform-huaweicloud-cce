@@ -29,17 +29,20 @@ variable "node_pool_key_pair" {
   description = "public ssh key of cce node pool"
 }
 
-variable "loadbalancer_ip" {
+variable "addon_ingress_loadbalancer_ip" {
+  description = "Load balancer ip for nginx-ingress addon"
   type    = string
   default = ""
 }
 
-variable "nginx_config" {
+variable "addon_ingress_config" {
+  description = "nginx config for nginx-ingress addon"
   type    = map(any)
   default = {}
 }
 
-variable "nginx_resource" {
+variable "addon_ingress_resource" {
+  description = "nginx resource for nginx-ingress addon"
   type    = map(any)
   default = {
               limitsCpu   = "1024m"
