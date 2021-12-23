@@ -19,7 +19,7 @@ resource "huaweicloud_cce_addon" "ingress" {
     custom_json = jsonencode(merge(
       jsondecode(data.huaweicloud_cce_addon_template.ingress.spec).parameters.custom,
       {
-        "config" = var.addon_ingress_config
+        "config"                = var.addon_ingress_config
         "defaultBackendService" = "kube-system/cceaddon-nginx-ingress-default-backend"
         "headers"               = {}
         "service" = {
@@ -33,7 +33,7 @@ resource "huaweicloud_cce_addon" "ingress" {
     flavor_json = jsonencode(merge(
       jsondecode(data.huaweicloud_cce_addon_template.ingress.spec).parameters.flavor1,
       {
-        replicas = 1
+        replicas  = 1
         resources = [var.addon_ingress_resource]
       }
       )

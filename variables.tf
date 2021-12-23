@@ -15,14 +15,15 @@ variable "subnet_id" {
   description = "Id of the subnet"
 }
 
-variable "node_pool_name" {
-  description = "Name of the cce node pool"
-  default     = "generic"
-}
-
-variable "node_pool_flavor_id" {
-  description = "Flavor of the cce node pool"
-  default     = "s3.large.4"
+variable "node_pool" {
+  description = "cce node pool feature"
+  default = {
+    simple = {
+      name      = "generic"
+      os        = "EulerOS 2.5"
+      flavor_id = "s3.large.4"
+    }
+  }
 }
 
 variable "node_pool_key_pair" {
