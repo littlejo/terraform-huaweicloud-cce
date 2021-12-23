@@ -1,25 +1,32 @@
 variable "name" {
+  description = "Name of the cce cluster"
 }
 
-variable "name_node_pool" {
-  default = "generic"
-}
-
-variable "vpc_id" {
-}
-
-variable "subnet_id" {
-}
-
-variable "flavor" {
-  default = "s3.large.4"
-}
-
-variable "cluster_flavor" {
+variable "flavor_id" {
+  description = "Flavor of the cce cluster"
   default = "cce.s2.small"
 }
 
-variable "public_key_name" {
+variable "vpc_id" {
+  description = "Id of the vpc"
+}
+
+variable "subnet_id" {
+  description = "Id of the subnet"
+}
+
+variable "node_pool_name" {
+  description = "Name of the cce node pool"
+  default = "generic"
+}
+
+variable "node_pool_flavor_id" {
+  description = "Flavor of the cce node pool"
+  default = "s3.large.4"
+}
+
+variable "node_pool_key_pair" {
+  description = "public ssh key of cce node pool"
 }
 
 variable "loadbalancer_ip" {

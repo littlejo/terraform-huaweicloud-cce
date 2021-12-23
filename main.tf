@@ -1,6 +1,6 @@
 resource "huaweicloud_cce_cluster" "this" {
   name                   = var.name
-  flavor_id              = var.cluster_flavor
+  flavor_id              = var.flavor_id
   vpc_id                 = var.vpc_id
   subnet_id              = var.subnet_id
   multi_az               = true
@@ -10,11 +10,11 @@ resource "huaweicloud_cce_cluster" "this" {
 resource "huaweicloud_cce_node_pool" "this" {
   count              = 1
   cluster_id         = huaweicloud_cce_cluster.this.id
-  name               = var.name_node_pool
+  name               = var.node_pool_name
   os                 = "EulerOS 2.5"
   initial_node_count = 1
-  flavor_id          = var.flavor
-  key_pair           = var.public_key_name
+  flavor_id          = var.node_pool_flavor_id
+  key_pair           = var.node_pool_key_pair
   scall_enable       = false
   type               = "vm"
 
